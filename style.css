@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+body {
+  font-family: "Montserrat", serif !important;
+
+  height: 300dvh;
+  background: linear-gradient(
+    90deg,
+    #dde5f0 6%,
+    #accdf3 25%,
+    #6ca5f0 45%,
+    #3b9ef0 55%,
+    #0e5cd1 94%
+  );
+}
+:root {
+  --span-color: rgb(17, 17, 214);
+  --text-transform: uppercase;
+}
+
+.bg-body-tertiary {
+  top: 10px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 6px rgba(50, 48, 48, 0.877);
+  width: 80%;
+}
+.navbar {
+  left: 25px;
+  right: 25px;
+  z-index: 10;
+  margin: 0 auto;
+  position: fixed !important;
+}
+
+.btn41-43 {
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 3px 30px 3px 1px;
+}
+
+.btn-41 {
+  z-index: 1;
+  color: rgb(123, 44, 44);
+}
+
+.btn-41:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 10%;
+  bottom: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(142, 82, 82);
+  transition: all 0.3s ease;
+}
+
+.btn-41:hover {
+  color: rgb(0, 0, 0);
+}
+
+.btn-41:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-41:active {
+  top: 2px;
+}
+/* màu logo */
+.logo {
+  font-weight: 800;
+  background: transparent;
+  text-transform: var(--text-transform);
+}
+span {
+  color: var(--span-color);
+  font-size: 24px;
+  font-weight: 800;
+}
+/* dường dẫn thông tin  */
+
+.parent {
+  width: 100%;
+  display: flex;
+}
+
+.child {
+  width: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+}
+.child .button i {
+  font-size: 40px;
+}
+
+.child:hover {
+  background-color: rgb(96, 132, 187);
+  background-position: -100px 100px, -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+  transform: perspective(180px) rotateX(60deg) translateY(2px);
+  box-shadow: 0px 10px 10px rgb(1, 49, 182);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.button:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg)
+    translateY(2px);
+  border-radius: 50%;
+}
+/* section 1 */
+
+.left h1 {
+  font-weight: 800;
+  font-size: 40px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  text-transform: var(--text-transform);
+  color: var(--span-color);
+}
+.container {
+  position: relative;
+  top: 80px;
+  border-radius: 20px;
+  margin: 10px 0 100px 0;
+  padding: 0 0 30px 0;
+  display: flex;
+  justify-content: space-around;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.4);
+}
+.container .left {
+  margin-top: 100px;
+  width: 600px;
+}
+/* Hiệu ứng  thẻ p nhảy lên */
+.container .left p {
+  animation: p 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  margin-top: 50px;
+}
+@keyframes p {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.right img {
+  max-width: 350px;
+  width: 100%;
+  height: 350px;
+  box-shadow: 6px 6px 12px #595959;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+/* animation Avatar */
+.right {
+  animation: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  padding-right: 30px;
+}
+
+@keyframes right {
+  0% {
+    transform: rotate3d(-1, 1, 0, -360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate3d(-1, 1, 0, 0deg);
+    opacity: 1;
+  }
+}
+.container .icon i {
+  border-radius: 6px;
+  border: #595959 solid 1px;
+  font-size: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.container .icon i:hover {
+  color: rgb(67, 158, 158);
+  box-shadow: inset #595959 2px 2px 3px;
+}
+@media (max-width: 900px) {
+  .container {
+    flex-wrap: wrap-reverse;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+/* section 2 */
+/* From Uiverse.io by Shoh2008 */
+.right-island {
+  margin-right: 100px;
+}
+.loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
+    0 5px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -14px auto;
+}
+
+/* img1 */
+.img-1:before,
+.img-1:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 45%;
+  top: -40%;
+  background-color: #84db61e2;
+  animation: wave 5s linear infinite;
+}
+/* img2 */
+.img-2:before,
+.img-2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 45%;
+  top: -40%;
+  background-color: #26c9d8;
+  animation: wave 5s linear infinite;
+}
+/* img3
+ */
+.img-3:before,
+.img-3:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 45%;
+  top: -40%;
+  background-color: #d82626;
+  animation: wave 5s linear infinite;
+}
+
+.loader img {
+  width: 100px;
+  z-index: 2;
+}
+
+/* img1 */
+.img-1:before {
+  border-radius: 30%;
+  background: rgba(97, 252, 0, 0.4);
+  animation: wave 5s linear infinite;
+}
+/* img2 */
+.img-2:before {
+  border-radius: 30%;
+  background: rgba(0, 252, 252, 0.4);
+  animation: wave 5s linear infinite;
+}
+/*  */
+.img-3:before {
+  border-radius: 30%;
+  background: rgba(252, 0, 0, 0.4);
+  animation: wave 5s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  */
