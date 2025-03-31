@@ -2,11 +2,12 @@
 
 body {
   font-family: "Montserrat", serif !important;
+  overflow-x: hidden;
 
-  height: 200dvh;
+  height: 150dvh;
   background: linear-gradient(
     90deg,
-    #dde5f0 6%,
+    #c0d6f5 6%,
     #accdf3 25%,
     #6ca5f0 45%,
     #3b9ef0 55%,
@@ -15,20 +16,64 @@ body {
 }
 :root {
   --span-color: rgb(17, 17, 214);
+  --background: rgba(255, 255, 255, 0.4);
+}
+.nav-item .setting {
+  width: 50px; /* Điều chỉnh kích thước */
+  height: 50px;
+  border-radius: 50%; /* Bo tròn */
+  object-fit: cover; /* Giữ tỷ lệ */
+}
+.navbar-nav .dropdown-menu {
+  background-color: var(--background);
+}
+.btn-5 {
+  color: var(--span-color);
+  border: 2px solid purple;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  font-size: 25px;
+  border-radius: 6px;
 }
 
-.bg-body-tertiary {
-  top: 10px;
-  border-radius: 12px;
-  box-shadow: 1px 1px 6px rgba(50, 48, 48, 0.877);
-  width: 80%;
+.btn-5:hover {
+  color: white;
 }
+
+.btn-5::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: rgb(29, 89, 185);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn-5:hover::before {
+  width: 160%;
+}
+
 .navbar {
-  left: 25px;
-  right: 25px;
+  top: 0;
   z-index: 10;
-  margin: 0 auto;
   position: fixed !important;
+  background: linear-gradient(
+    90deg,
+    #c0d6f5 6%,
+    #accdf3 25%,
+    #6ca5f0 45%,
+    #3b9ef0 55%,
+    #0e5cd1 94%
+  );
+  box-shadow: 1px 1px 1px rgba(50, 48, 48, 0.877);
+  width: 100%;
 }
 
 .btn41-43 {
@@ -40,10 +85,10 @@ body {
   margin: 3px 30px 3px 1px;
 }
 
-.btn-41 {
+/* .btn-41 {
   z-index: 1;
-  color: rgb(123, 44, 44);
-}
+  color: rgb(0, 0, 0);
+} */
 
 .btn-41:after {
   position: absolute;
@@ -54,7 +99,7 @@ body {
   left: 0;
   direction: rtl;
   z-index: -1;
-  background: rgb(142, 82, 82);
+  background: rgb(0, 0, 0);
   transition: all 0.3s ease;
 }
 
@@ -125,55 +170,22 @@ span {
 .container {
   position: relative;
   top: 80px;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 10px 0 100px 0;
   padding: 0 0 30px 0;
-  display: flex;
-  justify-content: space-around;
-  backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.4);
-}
-.container .left {
-  margin-top: 100px;
-  width: 600px;
-}
-/* Hiệu ứng  thẻ p nhảy lên */
-.container .left p {
-  animation: p 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  margin-top: 50px;
-}
-@keyframes p {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50px);
-  }
+  backdrop-filter: blur(8px);
+  background: var(--background);
 }
 
 .right img {
-  max-width: 350px;
+  max-width: 300px;
   width: 100%;
   height: 350px;
   box-shadow: 6px 6px 12px #595959;
-  margin-top: 100px;
-}
-/* animation Avatar */
-.right {
-  animation: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  padding-right: 30px;
+
+  margin: 100px 10px 0 0;
 }
 
-@keyframes right {
-  0% {
-    transform: rotate3d(-1, 1, 0, -360deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate3d(-1, 1, 0, 0deg);
-    opacity: 1;
-  }
-}
 .container .icon i {
   border-radius: 6px;
   border: #595959 solid 1px;
@@ -185,18 +197,8 @@ span {
   color: rgb(67, 158, 158);
   box-shadow: inset #595959 2px 2px 3px;
 }
-@media (max-width: 900px) {
-  .container {
-    flex-wrap: wrap-reverse;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-}
+
 /* section 2 */
-/* From Uiverse.io by Shoh2008 */
 
 .loader {
   width: 150px;
@@ -279,4 +281,119 @@ span {
   }
 }
 
-/*  */
+/* section 3 */
+
+.e-card {
+  background: transparent;
+  box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+  position: relative;
+  width: 210px;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+}
+.wave_1 {
+  background: linear-gradient(744deg, #e44481, #f34260 60%, #ff0202);
+}
+.wave_2 {
+  background: linear-gradient(744deg, #0051ff, #fa3535 60%, #4570fa);
+}
+.wave_3 {
+  background: linear-gradient(744deg, #d0ff00, #d6fa35 60%, #eefa45);
+}
+.wave_4 {
+  background: linear-gradient(744deg, #01a2b8, #2ed9e6 60%, #45e5fa);
+}
+.wave_5 {
+  background: linear-gradient(744deg, #48ff00, #51db27 60%, #9fff45);
+}
+.wave_6 {
+  background: linear-gradient(744deg, #ff9b00, #ff7f00 60%, #ff4500);
+}
+.wave_7 {
+  background: linear-gradient(744deg, #0084ff, #0004ff 60%, #0026ff);
+}
+.wave_8 {
+  background: linear-gradient(744deg, #ff7b00, #fd9d2f 60%, #9903f0);
+}
+
+.infotop {
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  top: 5.6em;
+  left: 0;
+  right: 0;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 3000ms infinite linear;
+}
+
+.wave {
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 4000ms;
+}
+
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* icon section */
+.row .e-card .infotop i {
+  font-size: 70px;
+}
+.row .e-card .infotop .CSS {
+  font-size: 62px;
+}
+.row .e-card .infotop .SASS {
+  font-size: 62px;
+}
+.row .text_h1 {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  text-transform: var(--text-transform);
+}
+i {
+  display: inline;
+}

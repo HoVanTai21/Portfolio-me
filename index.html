@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -22,103 +27,413 @@
     <title>Document</title>
   </head>
   <body>
-   
-  <div id="header-container"></div> 
-  <!-- load thanh header -->
+    <div id="header-container"></div>
+    <!-- load thanh header -->
 
     <main>
       <section class="Home" id="Home">
-        <div class="container ">
-          <div class="left">
-            <h3>Xin chào, là tôi đây</h3>
-            <h1 class="text-primary fs-1 fw-bolder text-uppercase">Hồ Văn Tài</h1>
-            <h3>Và tôi là một <span class="multiple-text"></span></h3>
-            <p>
-              Chào bạn, tôi là Hồ Văn Tài – một lập trình viên đam mê công nghệ
-              và thiết kế. Với kinh nghiệm vững vàng trong lập trình Front-end
-              và UX/UI Design, tôi luôn tìm cách sáng tạo và tối ưu trải nghiệm
-              người dùng. Tôi yêu thích việc thử thách bản thân với những dự án
-              mới, nơi tôi có thể học hỏi và phát triển kỹ năng. Ngoài công
-              việc, tôi luôn tìm kiếm những ý tưởng sáng tạo để nâng cao giá trị
-              sản phẩm và tạo ra những giải pháp thiết thực cho người dùng.
-            </p>
+        <div class="container">
+          <div class="row flex-column-reverse flex-md-row">
+            <div
+              class="left col text-center text-md-start p-5"
+              data-aos="fade-up"
+              data-aos-duration="3500"
+            >
+              <h3 id="tieude1"></h3>
+              <!-- Xin chào, là tôi đây -->
+              <h1
+                id="tieude2"
+                class="text-primary fs-1 fw-bolder text-uppercase"
+              >
+                <a class="nav-link active" aria-current="page" href="#Home"></a>
+              </h1>
+              <!-- Hồ Văn Tài -->
+              <h3 id="tieude3" class="d-inline"></h3>
+              <span class="multiple-text"></span>
+              <!-- Và tôi là một -->
+              <p id="Noidung1"></p>
+              <a href="CV.html">
+                <button
+                  id="btn"
+                  class="btn-5 text-uppercase px-4 py-2 fs-5 fw-bold my-2"
+                ></button>
+              </a>
 
-            <div class="parent">
-              <div class="child child-1">
-                <button class="button btn-1 border-0 bg-transparent d-flex justify-content-center align-items-center">
-                  <i
-                    class="fa-regular fa-envelope fs-1"
-                    style="color: rgb(184, 131, 67)"
-                  ></i>
-                </button>
-              </div>
-              <div class="child child-2">
-                <button class="button btn-2 border-0 bg-transparent d-flex justify-content-center align-items-center">
-                  <i class="fa-brands fa-instagram fs-1" style="color: rgb(250, 5, 5)"></i>
-                </button>
-              </div>
-              <div class="child child-3">
-                <button class="button btn-3 border-0 bg-transparent d-flex justify-content-center align-items-center">
-                  <i class="fa-brands fa-github fs-1"></i>
-                </button>
-              </div>
-              <div class="child child-4">
-                <button class="button btn-4 border-0 bg-transparent  d-flex justify-content-center align-items-center">
-                  <i class="fa-brands fa-facebook fs-1" style="color: blue"></i>
-                </button>
+              <div class="parent">
+                <div class="child child-1">
+                  <button
+                    class="button btn-1 border-0 bg-transparent d-flex justify-content-center align-items-center"
+                  >
+                    <a href=" hotai0907998139@gmail.com ">
+                      <i
+                        class="fa-regular fa-envelope fs-1"
+                        style="color: rgb(184, 131, 67)"
+                      ></i>
+                    </a>
+                  </button>
+                </div>
+                <div class="child child-2">
+                  <button
+                    class="button btn-2 border-0 bg-transparent d-flex justify-content-center align-items-center"
+                  >
+                    <i
+                      class="fa-brands fa-instagram fs-1"
+                      style="color: rgb(250, 5, 5)"
+                    ></i>
+                  </button>
+                </div>
+                <div class="child child-3">
+                  <button
+                    class="button btn-3 border-0 bg-transparent d-flex justify-content-center align-items-center"
+                  >
+                    <a href="https://github.com/HoVanTai21/Portfolio-me">
+                      <i
+                        class="fa-brands fa-github fs-1"
+                        style="color: rgb(0, 0, 0)"
+                      ></i
+                    ></a>
+                  </button>
+                </div>
+                <div class="child child-4">
+                  <button
+                    class="button btn-4 border-0 bg-transparent d-flex justify-content-center align-items-center"
+                  >
+                    <a href="https://www.facebook.com/tai.van.751594/about">
+                      <i
+                        class="fa-brands fa-facebook fs-1"
+                        style="color: blue"
+                      ></i>
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="right">
-            <img class="rounded-3" src="/img/Avatar.jpg" alt="Ảnh đại diện" />
-            <!-- Avatar 1  -->
+            <div
+              class="col text-center right"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              <img
+                class="rounded-3 img-fluid"
+                src="/img/Avatar.jpg"
+                alt="Ảnh đại diện"
+              />
+              <!-- Avatar 1  -->
+            </div>
           </div>
         </div>
-      </section >
-    <!-- Tóm tắt giới thiệu bản thân -->
+      </section>
+      <!-- Tóm tắt giới thiệu bản thân -->
       <section class="about" id="about">
         <div class="container about-container">
-
-          <div class="right left-island">
-            <div><img class="rounded-4" src="./img/avatar2.jpg" alt=""></div> 
-          </div>
-          <!-- Avatar 2 -->
-          <div class="left right-island"><h1>Về Tôi</h1>
-            <span> Tôi là một Front-end Web Developer</span>
-            <p>
-              tôi là một sinh viên ngành Công nghệ Thông tin, sắp tốt nghiệp
-              với nền tảng kiến thức vững chắc về lập trình, phát triển ứng dụng web,
-              quản trị hệ thống. Trong quá trình học tập, tôi đã tích lũy kinh nghiệm
-              qua các dự án thực tế và hoạt động nhóm, giúp tôi rèn luyện khả năng
-              giải quyết vấn đề cũng như làm việc độc lập và hiệu quả trong môi trường
-              tập thể. . Tôi luôn khao khát học hỏi và mong muốn được áp dụng các kiến
-              thức đã học vào thực tiễn, góp phần vào sự phát triển của tổ chức.
-            </p>
-            
-            <div class="card-group">
-              <div class="loader d-flex justify-content-center align-items-center img-1 rounded-circle">
-                <img src="./img/nodejs-removebg-preview.png" alt="" />
-              </div>
-              <div class="loader d-flex justify-content-center align-items-center img-2 rounded-circle">
-                <img src="./img/React-removebg-preview.png" alt="" />
-              </div>
-              <div class="loader d-flex justify-content-center align-items-center img-3 rounded-circle">
-                <img src="./img/logohtml.png" alt="" />
+          <div class="row flex-column flex-md-row">
+            <div class="col text-center right left-island">
+              <div data-aos="fade-right" data-aos-duration="3000">
+                <img class="rounded-3" src="./img/avatar2.jpg" alt="" />
               </div>
             </div>
-         
-          
+            <!-- Avatar 2 -->
+            <!-- tiêu đề 4 -->
+            <div class="left text-center text-md-start col right-island p-5">
+              <h1
+                class="d-inline-block border-bottom border-primary border-3 pb-2"
+                data-aos="fade-left"
+                data-aos-delay="800"
+                id="tieude4"
+              ></h1>
+              <br />
+              <!-- Tiêu đề 5 -->
+
+              <h1
+                class="text-primary fs-3 fw-bolder text-uppercase"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                id="tieude5"
+              ></h1>
+              <!-- nội dung 2  -->
+              <p
+                id="Noidung2"
+                data-aos="fade-left"
+                data-aos-delay="600"
+                data-aos-duration="3000"
+              ></p>
+
+              <div class="card-group">
+                <div
+                  class="loader d-flex justify-content-center align-items-center img-1 rounded-circle"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <img src="./img/nodejs-removebg-preview.png" alt="" />
+                </div>
+                <div
+                  class="loader d-flex justify-content-center align-items-center img-2 rounded-circle"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <img src="./img/reactlogo.png" alt="" />
+                </div>
+                <div
+                  class="loader d-flex justify-content-center align-items-center img-3 rounded-circle"
+                  data-aos="fade-up"
+                  data-aos-delay="700"
+                >
+                  <img src="./img/logohtml.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Kỹ năng -->
+      <section id="skill">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg p-3 text-center text-primary text-uppercase text_h1"
+            >
+              <!-- Tiêu đề 6 -->
+              <h1 id="tieude6" class="fw-bold"></h1>
+            </div>
           </div>
 
-        </div>
-       
-      </section>
+          <div
+            class="d-flex justify-content-center align-items-center gap-4 mt-4"
+          >
+            <div>
+              <button
+                class="btn-5 border-0 p-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#content1"
+                aria-expanded="false"
+                aria-controls="content1"
+              >
+                Web Developer
+              </button>
+            </div>
+            <div>
+              <button
+                class="btn-5 border-0 p-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#content2"
+                aria-expanded="false"
+                aria-controls="content2"
+              >
+                UI/UX Design
+              </button>
+            </div>
+          </div>
 
-      
+          <div class="mt-3">
+            <div class="collapse show" id="content1" data-bs-parent=".mt-3">
+              <div class="row justify-content-center gap-4 m-5">
+                <div
+                  class="e-card playing col-lg col-md-5"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="1000"
+                >
+                  <!--- Car Boostrap-->
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="infotop">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <br />
+                    Boostrap-Framework
+                  </div>
+                </div>
+
+                <div
+                  class="e-card playing col-lg col-md-5"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="1000"
+                >
+                  <!--- Car HTML-->
+                  <div class="wave wave_1"></div>
+                  <div class="wave wave_1"></div>
+                  <div class="wave wave_1"></div>
+                  <div class="infotop">
+                    <i class="fa-brands fa-html5"></i>
+                    <br />
+                    HTML
+                  </div>
+                </div>
+
+                <div
+                  class="e-card playing col-lg col-md-5"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="1500"
+                >
+                  <!--- Car CSS/SASS-->
+                  <div class="wave wave_2"></div>
+                  <div class="wave wave_2"></div>
+                  <div class="wave wave_2"></div>
+                  <div class="infotop">
+                    <i class="fa-brands fa-css3-alt CSS"></i>
+                    <i class="fa-brands fa-sass SASS"></i>
+                    <br />
+                    CSS/SASS
+                  </div>
+                </div>
+
+                <div
+                  class="e-card playing col-lg col-md-5"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="2000"
+                >
+                  <!--- Car JAVASCRIPT-->
+                  <div class="wave wave_3"></div>
+                  <div class="wave wave_3"></div>
+                  <div class="wave wave_3"></div>
+                  <div class="infotop">
+                    <i class="fa-brands fa-js"></i>
+                    <br />
+                    JAVASCRIPT
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gap-4 p-5">
+                <div
+                  class="e-card playing col"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="2500"
+                >
+                  <!--- Car REACT-->
+                  <div class="wave wave_4"></div>
+                  <div class="wave wave_4"></div>
+                  <div class="wave wave_4"></div>
+                  <div class="infotop">
+                    <i class="fa-brands fa-react"></i>
+                    <br />
+                    REACT
+                  </div>
+                </div>
+
+                <div
+                  class="e-card playing col"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="3000"
+                >
+                  <!--- Car NODEJS-->
+                  <div class="wave wave_5"></div>
+                  <div class="wave wave_5"></div>
+                  <div class="wave wave_5"></div>
+                  <div class="infotop">
+                    <i class="fa-brands fa-node-js"></i>
+                    <br />
+                    NODEJS
+                  </div>
+                </div>
+
+                <div
+                  class="e-card playing col"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="3000"
+                >
+                  <!--- Car MSQL-->
+                  <div class="wave wave_6"></div>
+                  <div class="wave wave_6"></div>
+                  <div class="wave wave_6"></div>
+                  <div class="infotop">
+                    <i class="fas fa-database"></i>
+                    <br />
+                    MYSQL
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Phần 2 -->
+            <div class="collapse" id="content2" data-bs-parent=".mt-3">
+              <div class="row justify-content-center gap-4 m-5">
+                <div
+                  class="e-card playing col-lg col-md-5"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="3000"
+                >
+                  <!--- Car CANVA-->
+                  <div class="wave wave_7"></div>
+                  <div class="wave wave_7"></div>
+                  <div class="wave wave_7"></div>
+                  <div class="infotop">
+                    <img
+                      src="./img/canva-logo-removebg-preview.png"
+                      alt="Canva"
+                      class="w-25"
+                    />
+                    <br />
+                    CANVA
+                  </div>
+                </div>
+
+                <div
+                  class="e-card playing col-lg col-md-5"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="3000"
+                >
+                  <!--- Car FIGMA-->
+                  <div class="wave wave_8"></div>
+                  <div class="wave wave_8"></div>
+                  <div class="wave wave_8"></div>
+                  <div class="infotop">
+                    <img
+                      src="./img/figma-removebg-preview.png"
+                      alt="Figma"
+                      class="w-25"
+                    />
+                    <br />
+                    FIGMA
+                  </div>
+                </div>
+
+                <div
+                  class="e-card playing col-lg col-md-5"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom "
+                  data-aos-duration="3000"
+                >
+                  <!--- Car Boostrap-->
+                  <div class="wave wave_9"></div>
+                  <div class="wave wave_9"></div>
+                  <div class="wave wave_9"></div>
+                  <div class="infotop">
+                    <img
+                      src="./img/photoshop-removebg-preview.png"
+                      alt="Photoshop"
+                      class="w-25"
+                    />
+                    <br />
+                    PHOTOSHOP
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <div id="footer-container"></div>
   </body>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(); // Khởi động AOS
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://kit.fontawesome.com/d9cc187330.js" crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/d9cc187330.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="js.js"></script>
 </html>
